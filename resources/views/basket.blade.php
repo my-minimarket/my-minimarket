@@ -1,9 +1,10 @@
 @extends('layouts.page')
 
 @section('headTitle')
-    Accueil
+    Panier
 @stop
 
 @section('title')
-    Acceuil
+    Panier
 @stop
+
