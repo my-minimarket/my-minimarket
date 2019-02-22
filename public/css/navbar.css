@@ -1,3 +1,17 @@
-#logo {
-    height: 50px;
+#nav-desktop li {
+    width: 15vw;
+}
+
+#nav-desktop a {
+    color: #ffffff!important;
+}
+
+#drop-menu a:hover {
+    color: #343a40!important;
+    /*background-color: #f8f9fa;*/
+}
+
+#nav-desktop {
+    font-family: MyriadProRegular;
+    font-size: 1.2em;
 }
