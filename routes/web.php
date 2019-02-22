@@ -18,3 +18,5 @@ Route::get('/catalogue', 'CatalogueController@show');
 Route::get('/product', 'ProductController@show');
 
 Route::get('/basket', 'BasketController@show');
+
+Route::get('/creatuser', 'CreatUserController@show');
