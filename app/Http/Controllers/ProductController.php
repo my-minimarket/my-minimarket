@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function show() {
-        return view('product');
+        return view('product', ['headTitle' => 'Fiche article']);
     }
 }

@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class BasketController extends Controller
 {
     public function show() {
-        return view('basket');
+        return view('basket', ['headTitle' => 'Panier']);
     }
 }

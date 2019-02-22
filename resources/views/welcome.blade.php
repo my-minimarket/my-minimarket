@@ -1,9 +1,5 @@
 @extends('layouts.page')
 
-@section('headTitle')
-    Accueil
-@stop
-
-@section('title')
-    Acceuil
+@section('content')
+    <p>Ceci est le contenue de la page</p>
 @stop
