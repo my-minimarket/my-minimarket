@@ -14,7 +14,7 @@
 
 @include('navbar')
 
-@include('header')
+{{--@include('header')--}}
 
 <div class="container">
     @yield('content')

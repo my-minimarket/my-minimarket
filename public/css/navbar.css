@@ -1,17 +1,123 @@
-#nav-desktop li {
-    width: 15vw;
-}
+/*#nav-desktop li {*/
+    /*width: 15vw;*/
+/*}*/
 
-#nav-desktop a {
-    color: #ffffff!important;
-}
+/*#nav-desktop a {*/
+    /*color: #ffffff;*/
+    /*display: block;*/
+    /*padding: .5rem 1rem;*/
+/*}*/
 
-#drop-menu a:hover {
-    color: #343a40!important;
+/*#drop-menu a:hover {*/
+    /*color: #343a40;*/
     /*background-color: #f8f9fa;*/
+/*}*/
+
+/*#nav-desktop {*/
+    /*font-family: MyriadProRegular;*/
+    /*font-size: 1.2em;*/
+    /*background-color: #343a40;*/
+    /*-ms-flex-pack: center;*/
+    /*justify-content: center;*/
+
+/*}*/
+
+/** {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #343a40;
+    font-family: MyriadProRegular, Arial, Helvetica, sans-serif;
 }
 
-#nav-desktop {
-    font-family: MyriadProRegular;
+#header {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10vw;
+    overflow: hidden;
+    background-color: #343a40;
+}
+
+.top-nav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.7em 1em;
+    text-decoration: none;
     font-size: 1.2em;
+}
+
+.top-nav a:hover {
+    background-color: #4D565E;
+}
+
+.top-nav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.top-nav .search-container {
+    float: right;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 12px;
+    font-size: 1em;
+    border: none;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 12px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
+#company {
+    display: flex;
+}
+
+#logo {
+    height: 50px;
+    margin: 0.3em 1em 0;
+}
+
+#text-company {
+    padding-top: 1.5em;
+}
+
+#text-company .helvetica {
+    font-family: HelveticaNeueInterfaceM3;
+    font-size: 1.2em;
+}
+
+#text-company .theboldfont {
+    font-family: TheBoldFont;
+    font-size: 1.5em;
+}
+
+#text-company .myriadpro {
+    font-family: MyriadProRegular;
+    font-size: 0.8em;
 }
