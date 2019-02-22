@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "TheBoldFont";
+    src: url("fonts/theboldfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('fonts/myriadpro_regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: 'HelveticaNeueInterfaceM3';
+    src: url('fonts/helvetica_neue_interface_m3.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
