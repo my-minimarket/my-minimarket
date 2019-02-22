@@ -20,29 +20,24 @@
             </thead>
             <tbody>
             <tr>
-                <th scope="row"><img src="{{ asset('pictures/products/petit_melange-japonais.jpg')}}" alt="mélange japonais"
-                                     width=80" height="100"></th>
+                <td><img src="{{ asset('pictures/products/petit_melange-japonais.jpg')}}"
+                                     alt="mélange japonais"
+                                     width=80" height="100"></td>
                 <td> Mélange japonais</td>
                 <td> N°001</td>
                 <td> Disponible</td>
                 <td> 2€</td>
                 <td>
-                    <div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                            </select>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                    <div class="form-group d-flex">
+                        <button type="button" class="btn btn-primary">+</button>
+                        <button type="button" class="btn btn-primary">-</button>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                     </div>
                 </td>
                 <td> 2€</td>
@@ -57,29 +52,24 @@
 
             <tbody>
             <tr>
-                <th scope="row"><img src="{{ asset('pictures/products/petit_the-sencha.jpg')}}" alt="thé sencha" width=80"
+                <th scope="row"><img src="{{ asset('pictures/products/petit_the-sencha.jpg')}}" alt="thé sencha"
+                                     width=80"
                                      height="100"></th>
                 <td> Thé Sencha</td>
                 <td> N°002</td>
                 <td> Disponible</td>
                 <td> 3.2€</td>
                 <td>
-                    <div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                            </select>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                    <div class="form-group d-flex">
+                        <button type="button" class="btn btn-primary">+</button>
+                        <button type="button" class="btn btn-primary">-</button>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                     </div>
                 </td>
                 <td> 3.2€</td>
@@ -94,29 +84,24 @@
 
             <tbody>
             <tr>
-                <th scope="row"><img src="{{ asset('pictures/products/petit_soupe-miso.jpg')}}" alt="soupe miso" width=80"
+                <th scope="row"><img src="{{ asset('pictures/products/petit_soupe-miso.jpg')}}" alt="soupe miso"
+                                     width=80"
                                      height="100"></th>
                 <td> Soupe miso</td>
                 <td> N°003</td>
                 <td> Disponible</td>
                 <td> 5€</td>
                 <td>
-                    <div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                            </select>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                    <div class="form-group d-flex">
+                        <button type="button" class="btn btn-primary">+</button>
+                        <button type="button" class="btn btn-primary">-</button>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                     </div>
                 </td>
                 <td> 5€</td>
@@ -131,16 +116,16 @@
         </table>
     </div>
     <div>
-        <div class="border border-dark d-flex align-items-end flex-column">
+        <div class="border-top border-dark d-flex align-items-end flex-column">
             <p class="">Total produits TTC : </p>
         </div>
     </div>
     <div>
-        <div class="border border-dark d-flex align-items-end flex-column">
+        <div class="border-top border-dark d-flex align-items-end flex-column">
             <div><p class="d-flex align-content-end">Total frais de port : </p></div>
             <p class="d-flex align-content-end">Total HT : </p>
         </div>
-        <div class="border border-dark d-flex align-items-end flex-column">
+        <div class="border-top border-dark d-flex align-items-end flex-column">
             <p class="">Total taxes : </p>
             <p class="">Total TTC : </p>
         </div>
