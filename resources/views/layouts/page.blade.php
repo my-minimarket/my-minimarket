@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap/bootstrap-grid.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap/bootstrap-reboot.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.css') }}">
     <title>My MiniMARKET - {{ $headTitle }}</title>
 </head>
 <body>
