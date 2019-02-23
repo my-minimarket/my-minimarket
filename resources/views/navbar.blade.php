@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <header>
     <div id="header">
@@ -11,11 +11,23 @@
                 <span class="myriadpro">, THE WORLD IN MY POCKET</span>
             </div>
         </div>
-        <div class="search-container">
-            <form action="#">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+        <div id="icons-content">
+            <div class="icons">
+                <form action="#">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="icons">
+                <form action="#">
+                    <button type="submit"><i class="fa fa-user"></i></button>
+                </form>
+            </div>
+            <div class="icons">
+                <form action="#">
+                    <button type="submit"><i class="fa fa-shopping-basket"></i></button>
+                </form>
+            </div>
         </div>
     </div>
     <nav class="top-nav" id="desktop-nav">

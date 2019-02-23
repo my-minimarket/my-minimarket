@@ -41,6 +41,8 @@ header {
     color: #ffffff;
 }
 
+
+
 .top-nav {
     display: flex;
     justify-content: space-around;
@@ -68,33 +70,34 @@ header {
     color: white;
 }
 
-.top-nav .search-container {
-    float: right;
-}
-
-.search-container input[type=text] {
+.icons input[type=text] {
     padding: 6px;
     margin-top: 12px;
     font-size: 1em;
     border: none;
 }
 
-.search-container button {
-    float: right;
+.icons button {
+    /*float: right;*/
     padding: 6px 10px;
     margin-top: 12px;
     margin-right: 16px;
-    background: #ddd;
+    background: #343a40;
+    color: #ffffff;
     font-size: 1em;
     border: none;
     cursor: pointer;
 }
 
-.search-container button:hover {
-    background: #ccc;
+.icons button:hover {
+    background: #4D565E;
 }
 
 #company {
+    display: flex;
+}
+
+#icons-content {
     display: flex;
 }
 
@@ -108,16 +111,16 @@ header {
 }
 
 #text-company .helvetica {
-    font-family: HelveticaNeueInterfaceM3;
+    font-family: HelveticaNeueInterfaceM3, sans-serif;
     font-size: 1.2em;
 }
 
 #text-company .theboldfont {
-    font-family: TheBoldFont;
+    font-family: TheBoldFont, sans-serif;
     font-size: 1.5em;
 }
 
 #text-company .myriadpro {
-    font-family: MyriadProRegular;
+    font-family: MyriadProRegular, sans-serif;
     font-size: 0.8em;
 }
