@@ -31,7 +31,17 @@
         </div>
     </div>
     <nav class="top-nav" id="desktop-nav">
-        <a href="#">PAYS</a>
+        <div class="dropdown">
+            <a class="dropbtn" href="#">PAYS <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">FRANCE</a>
+                <a href="#">ITALIE</a>
+                <a href="#">JAPON</a>
+                <a href="#">ÉTATS-UNIS</a>
+                <a href="#">AUTRES</a>
+
+            </div>
+        </div>
         <a href="#">SUCRÉ</a>
         <a href="#">SALÉ</a>
         <a href="#">BOISSONS</a>
