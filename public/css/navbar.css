@@ -5,6 +5,7 @@ header {
     margin: 0;
     background-color: #343a40;
     font-family: MyriadProRegular, Arial, Helvetica, sans-serif;
+    z-index: 1000;
 }
 
 #header {
@@ -118,3 +119,8 @@ header {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
+
+@media all(max-width) {
+    
+}
