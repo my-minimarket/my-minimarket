@@ -1,6 +1,7 @@
 @extends('layouts.page')
 
 @section('content')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/customer.css') }}">
     <h2 class="text-center"><small>
         MES INFORMATIONS
         </small></h2>
