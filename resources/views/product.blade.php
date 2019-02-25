@@ -2,11 +2,12 @@
 
 @section('content')
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <div class="flex-column mr-0 card">
         <div class="col-lg-6 pt-5">
-            <h1>PEPSI J-COLA - SAKURA</h1>
+            <h1>PEPSI COLA - SAKURA</h1>
 
 
         </div>
@@ -23,7 +24,7 @@
                     </div>
                     <div class="p-2">
 
-                        <p class="text-right"> 2 &nbsp; <i class="fa fa-eur"></i></p>
+                        <p class="text-right"> 2 &nbsp; <i class="fa fa-euro-sign"></i></p>
                     </div>
                     <div class="p-2 justify-self-end">
                         <button type="button" class="btn btn-default btn-lg">
@@ -62,21 +63,21 @@
                     <p class="p-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i
                                 class="fa fa-star-o"></i><i class="fa fa-star-o"></i> Pas mal...</p>
                     <div id="customer" class="card d-inline-flex col-12 p-2">
-                        <form class="col-12">
+                        <form class="col-12" method="POST" action="http://httpbin.org/post">
 
-                            <div class="form" method="POST" action="">
-                                <label for="exampleFormControlTextarea1" class="d-flex">DONNEZ VOTRE AVIS !
+                            <div class="form">
+                                <label for="exampleFormControlTextarea1" class="d-flex">DONNEZ VOTRE AVIS ! <br/>
                                     <div class="">
-                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                 class="fa fa-star"></i><i class="fa fa-star-o"></i>
                                     </div>
-                                        <div class="d-flex ml-xl-auto">
-                                        <input type="submit" name="Ajouter un avis" value="Ajouter un avis"
+                                    <div class="d-flex ml-xl-auto">
+                                        <input type="submit" name="addAvis" value="Ajouter un avis"
                                                class="btn btn-dark align-self-md-end">
                                     </div>
                                 </label>
 
-                                <input class="form-control form-control-lg" type="text"
+                                <input class="form-control form-control-lg" type="text" name="avis"
                                        placeholder="Entrez votre texte ici">
 
                             </div>
