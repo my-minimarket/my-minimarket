@@ -6,7 +6,7 @@
     </div>
     <div>
         <table class="table">
-            <thead class="thead-white">
+            <thead class="thead-white border">
             <tr>
                 <th scope="col">Produit</th>
                 <th scope="col">Description</th>
@@ -42,9 +42,8 @@
                 </td>
                 <td> 2€</td>
                 <td>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="Check1">
-                        <label class="form-check-label" for="Check1">Supprimer</label>
+                    <div class="form-group ">
+                        <button type="button" class="btn btn-link">Supprimer</button>
                     </div>
                 </td>
             </tr>
@@ -74,9 +73,8 @@
                 </td>
                 <td> 3.2€</td>
                 <td>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                        <label class="form-check-label" for="Check2">Supprimer</label>
+                    <div class="form-group ">
+                        <button type="button" class="btn btn-link">Supprimer</button>
                     </div>
                 </td>
             </tr>
@@ -106,28 +104,46 @@
                 </td>
                 <td> 5€</td>
                 <td>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="Check3">
-                        <label class="form-check-label" for="Check3">Supprimer</label>
+                    <div class="form-group ">
+                        <button type="button" class="btn btn-link">Supprimer</button>
                     </div>
                 </td>
             </tr>
             </tbody>
         </table>
     </div>
-    <div>
-        <div class="border-top border-dark d-flex align-items-end flex-column">
-            <p class="">Total produits TTC : </p>
+
+    <div class="container">
+        <div class="border-top border-dark">
+            <div class="d-flex justify-content-end">
+                <p class="col-3">Total frais de port : </p>
+                <p class="col-1"> 4€ </p>
+            </div>
+            <div class="d-flex justify-content-end">
+                <p class="col-3">Total HT : </p>
+                <p class="col-1"> 8.2€ </p>
+            </div>
+
+        </div>
+        <div class="border-top border-bottom border-dark">
+            <div class="d-flex justify-content-end">
+                <p class="col-3">Total taxes : </p>
+                <p class="col-1"> 2.20€ </p>
+            </div>
+            <div class="d-flex justify-content-end">
+                <p class="col-3">Total TTC : </p>
+                <p class="col-1"> 10.20€ </p>
+            </div>
         </div>
     </div>
+
     <div>
-        <div class="border-top border-dark d-flex align-items-end flex-column">
-            <div><p class="d-flex align-content-end">Total frais de port : </p></div>
-            <p class="d-flex align-content-end">Total HT : </p>
-        </div>
-        <div class="border-top border-dark d-flex align-items-end flex-column">
-            <p class="">Total taxes : </p>
-            <p class="">Total TTC : </p>
+        <div class="mt-3">
+            <p>Bon de réduction</p>
+            <div class="form-group d-flex">
+                <input type="text" class="form-control w-25" placeholder="Code de réduction">
+                <button type="submit" class="btn btn-primary">Valider</button>
+            </div>
         </div>
     </div>
 @stop
