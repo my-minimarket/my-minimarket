@@ -11,12 +11,14 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'WelcomeController@show');
 
-Route::get('/catalogue', 'CatalogueController@show');
+Route::get('/catalog', 'CatalogController@show');
 
 Route::get('/product', 'ProductController@show');
 
 Route::get('/basket', 'BasketController@show');
 
-Route::get('/creatuser', 'CreatUserController@show');
+Route::get('/customer', 'CustomerController@show');
