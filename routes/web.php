@@ -38,6 +38,7 @@ Route::post('/customer.modify/{id}','CustomerController@modify');
 Route::delete('/customer.modify/{id}','CustomerController@delete');
 
 
+Route::get('/customermodify', 'CustomerModifyController@show');
 // Address
 Route::get('/address', 'AddressController@show');
 
