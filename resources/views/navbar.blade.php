@@ -3,7 +3,7 @@
 <header id="desktop-header">
     <div id="header">
         <div id="company">
-            <a href="#"><img src="{{ asset('pictures/logo_white.png') }}" alt="My MiniMarket" id="logo"></a>
+            <a href="{{ route('welcome.show') }}"><img src="{{ asset('pictures/logo_white.png') }}" alt="My MiniMarket" id="logo"></a>
             <div id="text-company">
                 <span class="helvetica">MY MINI</span>
                 <span class="theboldfont">MARKET</span>
@@ -33,11 +33,11 @@
         <div class="dropdown">
             <a class="dropbtn" href="#">PAYS <i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
-                <a href="#">FRANCE</a>
-                <a href="#">ITALIE</a>
-                <a href="#">JAPON</a>
-                <a href="#">ÉTATS-UNIS</a>
-                <a href="#">AUTRES</a>
+                <a href="{{ route('catalog.show', ['id' => 5]) }}">FRANCE</a>
+                <a href="{{ route('catalog.show', ['id' => 6]) }}">ITALIE</a>
+                <a href="{{ route('catalog.show', ['id' => 7]) }}">JAPON</a>
+                <a href="{{ route('catalog.show', ['id' => 8]) }}">ÉTATS-UNIS</a>
+                <a href="{{ route('catalog.show') }}">TOUS</a>
 
             </div>
         </div>

@@ -13,9 +13,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'WelcomeController@show');
+Route::get('/', [
+    'as' => 'welcome.show',
+    'uses' => 'WelcomeController@show',
+]);
 
-Route::get('/catalog', 'CatalogController@show');
+Route::get('/catalog/{id?}', [
+    'as' => 'catalog.show',
+    'uses' => 'CatalogController@show',
+]);
 
 Route::get('/product', 'ProductController@show');
 
