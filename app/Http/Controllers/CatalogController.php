@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 class CatalogController extends Controller {
 
     public function show() {
-        return view('catalog', ['headTitle' => 'Catalogue']);
+        $products = DB::select('select * from products');
+        dd($products);
+        return view('product' , ['products' => $products]);
+       // return view('catalog', ['headTitle' => 'Catalogue']);
     }
 }
