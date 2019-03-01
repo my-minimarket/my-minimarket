@@ -32,4 +32,10 @@ class CategoryController extends Controller {
         $categories = Category::all();
         return view('categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
+
+    public function modify() {
+        $category = Category::where('id_category', request()->route('id'))->get();
+//        dd($category);
+        return view('categories.modify',  ['headTitle' => 'Catégories', 'category' => $category]);
+    }
 }
