@@ -23,6 +23,8 @@ Route::get('/catalog/{id?}', [
     'uses' => 'CatalogController@show',
 ]);
 
+Route::get('/category', 'CategoryController@show');
+
 Route::get('/product', 'ProductController@show');
 
 Route::get('/basket', 'BasketController@show');
