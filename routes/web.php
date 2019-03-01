@@ -24,6 +24,11 @@ Route::get('/catalog/{id?}', [
 ]);
 
 Route::get('/category', 'CategoryController@show');
+Route::post('/category', 'CategoryController@store');
+Route::get('/category/create', 'CategoryController@create');
+Route::delete('/category/delete/{id}',[
+    'as' => 'category.delete',
+    'uses' => 'CategoryController@delete']);
 
 Route::get('/product', 'ProductController@show');
 
