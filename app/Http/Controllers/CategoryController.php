@@ -34,7 +34,7 @@ class CategoryController extends Controller {
     }
 
     public function modify() {
-        $category = Category::where('id_category', request()->route('id'))->get();
+        $category = Category::where('id_category', request()->route('id'))->first();
 //        dd($category);
         return view('categories.modify',  ['headTitle' => 'Catégories', 'category' => $category]);
     }

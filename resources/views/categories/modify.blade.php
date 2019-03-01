@@ -11,7 +11,7 @@
                 <label for="description">Description : </label>
             </div>
             <div class="col-md-2">
-                <input type="text" name="description" id="description" placeholder="Description de la catégorie" value="{{ $category[0]->description }}">
+                <input type="text" name="description" id="description" placeholder="Description de la catégorie" value="{{ $category->description }}">
             </div>
             <div class="my-3">
                 <div class="col-md-4">
