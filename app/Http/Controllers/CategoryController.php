@@ -12,11 +12,11 @@ class CategoryController extends Controller {
 
     public function show() {
         $categories = Category::all();
-        return view('categories.index', ['headTitle' => 'Catégories', 'categories' => $categories]);
+        return view('bo.categories.index', ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
 
     public function create() {
-        return view('categories.create', ['headTitle' => 'Catégories']);
+        return view('bo.categories.create', ['headTitle' => 'Catégories']);
     }
 
     public function store() {
@@ -24,23 +24,23 @@ class CategoryController extends Controller {
         $category->description = request('description');
         $category->save();
         $categories = Category::all();
-        return view('categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
+        return view('bo.categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
 
     public function delete() {
         Category::where('id_category', request()->route('id'))->delete();
         $categories = Category::all();
-        return view('categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
+        return view('bo.categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
 
     public function modify() {
         $category = Category::where('id_category', request()->route('id'))->first();
-        return view('categories.modify',  ['headTitle' => 'Catégories', 'category' => $category]);
+        return view('bo.categories.modify',  ['headTitle' => 'Catégories', 'category' => $category]);
     }
 
     public function update() {
         Category::where('id_category', request()->route('id'))->update(['description' => request('description')]);
         $categories = Category::all();
-        return view('categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
+        return view('bo.categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
 }

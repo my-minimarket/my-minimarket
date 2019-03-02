@@ -26,12 +26,12 @@ Route::get('/catalog/{id?}', [
 ]);
 
 // Category
-Route::get('/category', 'CategoryController@show');
-Route::post('/category', 'CategoryController@store');
-Route::get('/category/create', 'CategoryController@create');
-Route::post('/category/modify/{id}','CategoryController@modify');
-Route::put('/category/modify/{id}','CategoryController@update');
-Route::delete('/category/delete/{id}','CategoryController@delete');
+Route::get('/bo/category', 'CategoryController@show');
+Route::post('/bo/category', 'CategoryController@store');
+Route::get('/bo/category/create', 'CategoryController@create');
+Route::post('/bo/category/modify/{id}','CategoryController@modify');
+Route::put('/bo/category/modify/{id}','CategoryController@update');
+Route::delete('/bo/category/delete/{id}','CategoryController@delete');
 
 // Product
 Route::get('/product', 'ProductController@show');
