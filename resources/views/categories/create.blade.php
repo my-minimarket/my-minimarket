@@ -10,11 +10,11 @@
                 <label for="description">Description : </label>
             </div>
             <div class="col-md-2">
-                <input type="text" name="description" id="description" placeholder="Description de la catégorie">
+                <input type="text" name="description" id="description" class="w-100" placeholder="Description de la catégorie">
             </div>
             <div class="my-3">
                 <div class="col-md-4">
-                    <button type="submit">Création</button>
+                    <button type="submit">Créer</button>
                 </div>
             </div>
         </div>
