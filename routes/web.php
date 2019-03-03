@@ -25,6 +25,16 @@ Route::get('/catalog/{id?}', [
     'uses' => 'CatalogController@show',
 ]);
 
+// Product
+Route::get('/product', 'ProductController@show');
+
+// Basket
+Route::get('/basket', 'BasketController@show');
+
+// Customer
+Route::get('/customer', 'CustomerController@show');
+
+// Back office
 // Category
 Route::get('/bo/category', 'CategoryController@show');
 Route::post('/bo/category', 'CategoryController@store');
@@ -34,10 +44,9 @@ Route::put('/bo/category/modify/{id}','CategoryController@update');
 Route::delete('/bo/category/delete/{id}','CategoryController@delete');
 
 // Product
-Route::get('/product', 'ProductController@show');
-
-// Basket
-Route::get('/basket', 'BasketController@show');
-
-// Customer
-Route::get('/customer', 'CustomerController@show');
+Route::get('/bo/product', 'BoProductController@show');
+Route::post('/bo/product', 'BoProductController@store');
+Route::get('/bo/product/create', 'BoProductController@create');
+Route::post('/bo/product/modify/{id}','BoProductController@modify');
+Route::put('/bo/product/modify/{id}','BoProductController@update');
+Route::delete('/bo/product/delete/{id}','BoProductController@delete');
