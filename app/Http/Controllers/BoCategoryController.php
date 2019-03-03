@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 
-class CategoryController extends Controller {
+class BoCategoryController extends Controller {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function show() {

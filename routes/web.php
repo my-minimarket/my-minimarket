@@ -36,12 +36,12 @@ Route::get('/customer', 'CustomerController@show');
 
 // Back office
 // Category
-Route::get('/bo/category', 'CategoryController@show');
-Route::post('/bo/category', 'CategoryController@store');
-Route::get('/bo/category/create', 'CategoryController@create');
-Route::post('/bo/category/modify/{id}','CategoryController@modify');
-Route::put('/bo/category/modify/{id}','CategoryController@update');
-Route::delete('/bo/category/delete/{id}','CategoryController@delete');
+Route::get('/bo/category', 'BoCategoryController@show');
+Route::post('/bo/category', 'BoCategoryController@store');
+Route::get('/bo/category/create', 'BoCategoryController@create');
+Route::post('/bo/category/modify/{id}','BoCategoryController@modify');
+Route::put('/bo/category/modify/{id}','BoCategoryController@update');
+Route::delete('/bo/category/delete/{id}','BoCategoryController@delete');
 
 // Product
 Route::get('/bo/product', 'BoProductController@show');
