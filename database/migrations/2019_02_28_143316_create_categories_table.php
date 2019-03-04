@@ -19,14 +19,10 @@ class CreateCategoriesTable extends Migration
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
-            $table->increments('id_category');
+            $table->increments('id');
             $table->string('description', 50);
             $table->timestamps();
         });
-
-//        Schema::table('categories', function (Blueprint $table) {
-//            $table->foreign('id_category')->references('id_category')->on('categories');
-//        });
 
         DB::table('categories')->insert([
             'description' => 'Sucré',
@@ -77,14 +73,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-//        Schema::table('categories', function(Blueprint $table) {
-//            $table->dropForeign('id_category');
-//        });
-//
-//        Schema::table('categories', function(Blueprint $table) {
-//            $table->dropColumn('id_category');
-//        });
-
         Schema::dropIfExists('categories');
     }
 }

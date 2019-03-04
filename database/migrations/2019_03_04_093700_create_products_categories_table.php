@@ -19,405 +19,405 @@ class CreateProductsCategoriesTable extends Migration
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
-            $table->unsignedInteger('products_id');
-            $table->unsignedInteger('categories_id');
+            $table->unsignedInteger('product_id');
+            $table->unsignedInteger('category_id');
             $table->timestamps();
-            $table->index(['products_id', 'categories_id']);
+            $table->primary(['product_id', 'category_id']);
         });
 
         Schema::table('products_categories', function (Blueprint $table) {
-            $table->foreign('products_id')->references('id_product')->on('products')
+            $table->foreign('product_id')->references('id')->on('products')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
 
         Schema::table('products_categories', function (Blueprint $table) {
-            $table->foreign('categories_id')->references('id_category')->on('categories')
+            $table->foreign('category_id')->references('id')->on('categories')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
 
         DB::table('products_categories')->insert([
-            'products_id' => '1',
-            'categories_id' => '1',
+            'product_id' => '1',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '1',
-            'categories_id' => '7',
+            'product_id' => '1',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '2',
-            'categories_id' => '1',
+            'product_id' => '2',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '2',
-            'categories_id' => '7',
+            'product_id' => '2',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '3',
-            'categories_id' => '1',
+            'product_id' => '3',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '4',
-            'categories_id' => '3',
+            'product_id' => '4',
+            'category_id' => '3',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '4',
-            'categories_id' => '7',
+            'product_id' => '4',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '5',
-            'categories_id' => '3',
+            'product_id' => '5',
+            'category_id' => '3',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '5',
-            'categories_id' => '7',
+            'product_id' => '5',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '6',
-            'categories_id' => '3',
+            'product_id' => '6',
+            'category_id' => '3',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '6',
-            'categories_id' => '7',
+            'product_id' => '6',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '7',
-            'categories_id' => '3',
+            'product_id' => '7',
+            'category_id' => '3',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '7',
-            'categories_id' => '7',
+            'product_id' => '7',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '8',
-            'categories_id' => '3',
+            'product_id' => '8',
+            'category_id' => '3',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '8',
-            'categories_id' => '7',
+            'product_id' => '8',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '9',
-            'categories_id' => '1',
+            'product_id' => '9',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '9',
-            'categories_id' => '7',
+            'product_id' => '9',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '10',
-            'categories_id' => '1',
+            'product_id' => '10',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '10',
-            'categories_id' => '7',
+            'product_id' => '10',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '11',
-            'categories_id' => '1',
+            'product_id' => '11',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '11',
-            'categories_id' => '7',
+            'product_id' => '11',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '12',
-            'categories_id' => '1',
+            'product_id' => '12',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '12',
-            'categories_id' => '7',
+            'product_id' => '12',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '13',
-            'categories_id' => '1',
+            'product_id' => '13',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '13',
-            'categories_id' => '7',
+            'product_id' => '13',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '14',
-            'categories_id' => '1',
+            'product_id' => '14',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '14',
-            'categories_id' => '7',
+            'product_id' => '14',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '15',
-            'categories_id' => '1',
+            'product_id' => '15',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '15',
-            'categories_id' => '7',
+            'product_id' => '15',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '16',
-            'categories_id' => '2',
+            'product_id' => '16',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '16',
-            'categories_id' => '7',
+            'product_id' => '16',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '17',
-            'categories_id' => '2',
+            'product_id' => '17',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '17',
-            'categories_id' => '7',
+            'product_id' => '17',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '18',
-            'categories_id' => '2',
+            'product_id' => '18',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '18',
-            'categories_id' => '7',
+            'product_id' => '18',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '19',
-            'categories_id' => '2',
+            'product_id' => '19',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '19',
-            'categories_id' => '7',
+            'product_id' => '19',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '20',
-            'categories_id' => '2',
+            'product_id' => '20',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '20',
-            'categories_id' => '7',
+            'product_id' => '20',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '21',
-            'categories_id' => '2',
+            'product_id' => '21',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '21',
-            'categories_id' => '7',
+            'product_id' => '21',
+            'category_id' => '7',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '22',
-            'categories_id' => '1',
+            'product_id' => '22',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '22',
-            'categories_id' => '8',
+            'product_id' => '22',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '23',
-            'categories_id' => '1',
+            'product_id' => '23',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '23',
-            'categories_id' => '8',
+            'product_id' => '23',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '24',
-            'categories_id' => '3',
+            'product_id' => '24',
+            'category_id' => '3',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '24',
-            'categories_id' => '8',
+            'product_id' => '24',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '25',
-            'categories_id' => '1',
+            'product_id' => '25',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '25',
-            'categories_id' => '8',
+            'product_id' => '25',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '26',
-            'categories_id' => '4',
+            'product_id' => '26',
+            'category_id' => '4',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '26',
-            'categories_id' => '8',
+            'product_id' => '26',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '27',
-            'categories_id' => '1',
+            'product_id' => '27',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '27',
-            'categories_id' => '8',
+            'product_id' => '27',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '28',
-            'categories_id' => '1',
+            'product_id' => '28',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '28',
-            'categories_id' => '8',
+            'product_id' => '28',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '29',
-            'categories_id' => '1',
+            'product_id' => '29',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '29',
-            'categories_id' => '8',
+            'product_id' => '29',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '30',
-            'categories_id' => '1',
+            'product_id' => '30',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '30',
-            'categories_id' => '8',
+            'product_id' => '30',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '31',
-            'categories_id' => '1',
+            'product_id' => '31',
+            'category_id' => '1',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '31',
-            'categories_id' => '8',
+            'product_id' => '31',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '35',
-            'categories_id' => '4',
+            'product_id' => '35',
+            'category_id' => '4',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '37',
-            'categories_id' => '8',
+            'product_id' => '37',
+            'category_id' => '8',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
         DB::table('products_categories')->insert([
-            'products_id' => '40',
-            'categories_id' => '2',
+            'product_id' => '40',
+            'category_id' => '2',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today()
         ]);
@@ -431,11 +431,11 @@ class CreateProductsCategoriesTable extends Migration
     public function down()
     {
         Schema::table('products_categories', function (Blueprint $table) {
-            $table->dropForeign('products_id');
+            $table->dropForeign('product_id');
         });
 
         Schema::table('products_categories', function (Blueprint $table) {
-            $table->dropForeign('categories_id');
+            $table->dropForeign('category_id');
         });
 
         Schema::dropIfExists('products_categories');

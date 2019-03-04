@@ -25,18 +25,18 @@ class BoProductController extends Controller
     }
 
     public function delete() {
-        Product::where('id_product', request()->route('id'))->delete();
+        Product::where('id', request()->route('id'))->delete();
         $products = Product::all();
         return view('bo.products.index', ['headTitle' => 'BO produits', 'products' => $products]);
     }
 
     public function modify() {
-        $product = Product::where('id_product', request()->route('id'))->first();
+        $product = Product::where('id', request()->route('id'))->first();
         return view('bo.products.modify',  ['headTitle' => 'Bo produits', 'product' => $product]);
     }
 
     public function update() {
-        Product::where('id_product', request()->route('id'))->update(['name' => request('name'), 'price' => request('price')]);
+        Product::where('id', request()->route('id'))->update(['name' => request('name'), 'price' => request('price')]);
         $products = Product::all();
         return view('bo.products.index', ['headTitle' => 'BO produits', 'products' => $products]);
     }

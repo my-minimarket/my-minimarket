@@ -50,3 +50,6 @@ Route::get('/bo/product/create', 'BoProductController@create');
 Route::post('/bo/product/modify/{id}','BoProductController@modify');
 Route::put('/bo/product/modify/{id}','BoProductController@update');
 Route::delete('/bo/product/delete/{id}','BoProductController@delete');
+
+// ProductCategory
+Route::get('/bo/product_category', 'BoProductCategoryController@show');

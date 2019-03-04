@@ -3,10 +3,10 @@
 @section('content')
     <h1 class="text-center">Modification d'un produit</h1>
 
-    <form method="POST" action="/bo/product/modify/{{ $product->id_product }}">
+    <form method="POST" action="/bo/product/modify/{{ $product->id }}">
         @method('PUT')
         @csrf
-        <div class="d-flex bg-white rounded shadow flex-column p-3" style="margin-bottom:10px">
+        <div class="d-flex bg-white shadow flex-column p-3" style="margin-bottom:10px">
             <div class="mb-3">
                 <div class="col-md-12">
                     <label for="name">Nom : </label>

@@ -5,7 +5,7 @@
 
     <form method="POST" action="{{ asset('/bo/product') }}">
         @csrf
-        <div class="d-flex bg-white rounded shadow flex-column p-3" style="margin-bottom:10px">
+        <div class="d-flex bg-white shadow flex-column p-3" style="margin-bottom:10px">
             <div class="mb-3">
                 <div class="col-md-12">
                     <label for="name">Nom : </label>
