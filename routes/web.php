@@ -53,3 +53,6 @@ Route::delete('/bo/product/delete/{id}','BoProductController@delete');
 
 // ProductCategory
 Route::get('/bo/product_category', 'BoProductCategoryController@show');
+Route::post('/bo/product_category/{product_id}', 'BoProductCategoryController@add');
+Route::put('/bo/product_category/{product_id}', 'BoProductCategoryController@store');
+Route::delete('/bo/product_category/{product_id}/{category_id}','BoProductCategoryController@delete');
