@@ -28,7 +28,13 @@ class CreateProductsTable extends Migration
             $table->string('picture', 255)->nullable();
             $table->timestamps();
         });
-        DB::table('products')->insert(['name' => 'Pocky Fraise Heartful',
+
+//        Schema::table('products', function (Blueprint $table) {
+//            $table->foreign('PRODUCTS_id_product')->references('id_product')->on('products');
+//        });
+
+        DB::table('products')->insert([
+            'name' => 'Pocky Fraise Heartful',
             'description' => 'Pocky à la fraise avec de petits morceaux de fraise incrustés dans le chocolat et bâtonnets en forme de coeur. Nom en japonais: "Pocky Strawberry Tsubutsubu Ichigo Heartful".',
             'price' => '1.62',
             'weight' => '0.750',
@@ -436,6 +442,14 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
+//        Schema::table('products', function(Blueprint $table) {
+//            $table->dropForeign('PRODUCTS_id_product');
+//        });
+//
+//        Schema::table('products', function(Blueprint $table) {
+//            $table->dropColumn('PRODUCTS_id_product');
+//        });
+
         Schema::dropIfExists('products');
     }
 }
