@@ -23,6 +23,11 @@ class CreateCategoriesTable extends Migration
             $table->string('description', 50);
             $table->timestamps();
         });
+
+//        Schema::table('categories', function (Blueprint $table) {
+//            $table->foreign('id_category')->references('id_category')->on('categories');
+//        });
+
         DB::table('categories')->insert([
             'description' => 'Sucré',
             'created_at' => Carbon::today(),
@@ -72,6 +77,14 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
+//        Schema::table('categories', function(Blueprint $table) {
+//            $table->dropForeign('id_category');
+//        });
+//
+//        Schema::table('categories', function(Blueprint $table) {
+//            $table->dropColumn('id_category');
+//        });
+
         Schema::dropIfExists('categories');
     }
 }
