@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
-            $table->increments('id_product');
+            $table->increments('id');
             $table->string('name', 50);
             $table->text('description')->nullable();
             $table->decimal('price', 6, 2);
@@ -28,10 +28,6 @@ class CreateProductsTable extends Migration
             $table->string('picture', 255)->nullable();
             $table->timestamps();
         });
-
-//        Schema::table('products', function (Blueprint $table) {
-//            $table->foreign('PRODUCTS_id_product')->references('id_product')->on('products');
-//        });
 
         DB::table('products')->insert([
             'name' => 'Pocky Fraise Heartful',
@@ -442,14 +438,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-//        Schema::table('products', function(Blueprint $table) {
-//            $table->dropForeign('PRODUCTS_id_product');
-//        });
-//
-//        Schema::table('products', function(Blueprint $table) {
-//            $table->dropColumn('PRODUCTS_id_product');
-//        });
-
         Schema::dropIfExists('products');
     }
 }

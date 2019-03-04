@@ -28,18 +28,18 @@ class BoCategoryController extends Controller {
     }
 
     public function delete() {
-        Category::where('id_category', request()->route('id'))->delete();
+        Category::where('id', request()->route('id'))->delete();
         $categories = Category::all();
         return view('bo.categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
 
     public function modify() {
-        $category = Category::where('id_category', request()->route('id'))->first();
+        $category = Category::where('id', request()->route('id'))->first();
         return view('bo.categories.modify',  ['headTitle' => 'Catégories', 'category' => $category]);
     }
 
     public function update() {
-        Category::where('id_category', request()->route('id'))->update(['description' => request('description')]);
+        Category::where('id', request()->route('id'))->update(['description' => request('description')]);
         $categories = Category::all();
         return view('bo.categories.index',  ['headTitle' => 'Catégories', 'categories' => $categories]);
     }
