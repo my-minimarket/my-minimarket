@@ -7,7 +7,7 @@
             {{ $product->id . " / " . $product->name . " / " . $product->price . "€" }}
 
             <div class="d-flex">
-                <form method="POST" action="#">
+                <form method="POST" action="/bo/product_category/{{ $product->id }}">
                     @csrf
                     <input type="submit" name="add" value="Ajouter une catégorie"/>
                 </form>
@@ -17,7 +17,7 @@
             <div class="d-flex bg-white shadow pl-5 pr-3 pb-3 justify-content-between">
                 {{ $category->id . " " . $category->description }}
                 <div class="d-flex">
-                    <form method="POST" action="/bo/product_category/delete/{{ $product->id }}/{{ $category->id }}">
+                    <form method="POST" action="/bo/product_category/{{ $product->id }}/{{ $category->id }}">
                         @method('DELETE')
                         @csrf
                         <input type="submit" name="delete" value="Supprimer"/>
