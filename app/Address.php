@@ -14,9 +14,9 @@ class Address extends Model
     /* Définit les composants qui sont modifiables !*/
     ];
 
- //   public function customer()
-//    {
-//        return $this->belongsTo('App\Customer');
-//    }
+    public function customer()
+    {
+        return $this->belongsTo('App\Customer');
+    }
     /* Définit les relations avec les autres tables !*/
 }
