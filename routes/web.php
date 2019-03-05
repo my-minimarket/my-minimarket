@@ -40,6 +40,9 @@ Route::delete('/customer.modify/{id}','CustomerController@delete');
 
 Route::get('/customermodify', 'CustomerModifyController@show');
 
+Route::get('/orders', 'OrdersController@showOrders');
+
+
 Route::get('/orders', 'OrdersController@showorder');
 // Address
 Route::get('/address', 'AddressController@show');
