@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use Illuminate\Http\Request;
 use App\Address;
 
@@ -15,7 +16,9 @@ class AddressController extends Controller
         } else {
             $address = Address::all();
         }
-        return view('address', ['adresses' => $address, 'headTitle' => 'Adresses']);
+
+        $customers = Customer::all();
+        return view('address', ['adresses' => $address, 'customers' => $customers, 'headTitle' => 'Adresses']);
     }
 
     public function create() {
