@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Address;
 
-class AddressController extends Controller
+class BoAddressController extends Controller
 {
     public function show() {
 
@@ -15,13 +15,14 @@ class AddressController extends Controller
         } else {
             $address = Address::all();
         }
-        return view('address', ['adresses' => $address, 'headTitle' => 'Adresses']);
+        return view('bo.addresses.index', ['addresses' => $address, 'headTitle' => 'Adresses']);
     }
 
     public function create() {
         $address = Address::all();
 
-        return view('address', ['adresses' => $address, 'headTitle' => 'Adresses']);
+        return view('bo.addresses.index', ['addresses' => $address, 'headTitle' => 'Adresses']);
+
 
     }
 
@@ -43,7 +44,8 @@ class AddressController extends Controller
 
         $addresses = Address::all();
 
-        return view('address', ['adresses' => $address, 'headTitle' => 'Adresses']);
+        return view('bo.addresses.index', ['addresses' => $address, 'headTitle' => 'Adresses']);
+
     }
 
     public function delete() {
@@ -52,6 +54,7 @@ class AddressController extends Controller
 
         $address-> delete();
 
-        return view('address', ['headTitle' => 'Adresses']);
+        return view('bo.addresses.index', ['addresses' => $address, 'headTitle' => 'Adresses']);
+
     }
 }

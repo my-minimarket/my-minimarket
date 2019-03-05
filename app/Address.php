@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Addresses extends Model
+class Address extends Model
 {
     protected $table = 'addresses';
     /* Définit la table : Je protège ma table addresses*/
@@ -14,9 +14,9 @@ class Addresses extends Model
     /* Définit les composants qui sont modifiables !*/
     ];
 
-    public function categories()
-    {
-        return $this->belongsToMany('App\Category');
-    }
+ //   public function customer()
+//    {
+//        return $this->belongsTo('App\Customer');
+//    }
     /* Définit les relations avec les autres tables !*/
 }
