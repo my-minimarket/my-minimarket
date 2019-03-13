@@ -33,9 +33,9 @@ Route::get('/basket', 'BasketController@show');
 
 // Customer
 Route::get('/customer', 'CustomerController@show');
-Route::post('/customer.modify', 'CustomerController@store');
-Route::post('/customer.modify/{id}','CustomerController@modify');
-Route::delete('/customer.modify/{id}','CustomerController@delete');
+Route::post('/customer/modify', 'CustomerController@store');
+Route::put('/customer/modify/{$id}', 'CustomerController@modify');
+Route::delete('/customer/modify/{id}','CustomerController@delete');
 
 
 // Back office

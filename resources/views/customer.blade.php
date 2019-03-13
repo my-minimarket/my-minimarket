@@ -9,16 +9,16 @@
             </div>
             <div class="d-flex justify-content-center">
                 <div class="col-md-11">
-                    <form method="post" action="customer.modify.blade.php" enctype="multipart/form-data">
+                    <form  method="post" action="/customer/modify">
                         {{ csrf_field() }}
-                        <div class="form-group justify-content-between ">
+                        <div class="form-group justify-content-between">
                             <label for="exampleInputPassword1">Prénom * </label>
-                            <input name="firstname" type="text" class="form-control" id="exampleInputPassword1">
+                            <input name="firstname" type="text" class="form-control" id="exampleInputPassword1" required>
                 </div>
 
                         <div class="form-group ">
                             <label for="exampleInputPassword1">Nom *</label>
-                            <input name="lastname" type="text" class="form-control" id="exampleInputPassword1">
+                            <input name="lastname" type="text" class="form-control" id="exampleInputPassword1" required>
 
                         </div>
 
@@ -26,7 +26,7 @@
                             <label for="mail">Adresse mail *</label>
                             <input name="email" type="email" class="form-control" id="exampleInputEmail1"
                                    aria-describedby="emailHelp"
-                                   placeholder="Entrez mail">
+                                   placeholder="Entrez mail" required>
                             <small id="email" class="form-text text-muted">Nous ne partageons jamais votre mail avec qui
                                 que
                                 ce
@@ -36,12 +36,12 @@
                         <div class="form-group">
                             <label for="InputPassword1">Mots de passe *</label>
                             <input name="password" type="password" class="form-control" id="exampleInputPassword1"
-                                   placeholder="Entrez mots de passe">
+                                   placeholder="Entrez mots de passe" required>
                         </div>
                         <div class="form-group">
                             <label for="InputPasswordbis">Mots de passe * (Confirmer votre choix)</label>
                             <input name="password"  type="password" class="form-control" id="exampleInputPassword1"
-                                   placeholder="Entrez mots de passe">
+                                   placeholder="Entrez mots de passe" required>
                         </div>
                         <div class="form-check ">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="row justify-content-between mb-4 mt-2"><p>* Chanmps requis</p>
-                            <button type="submit" class="btn btn-primary">Envoyé</button>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
                         </div>
                     </form>
                 </div>

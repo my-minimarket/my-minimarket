@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use http\Env\Request;
 
 class CustomerController extends Controller {
@@ -14,15 +15,14 @@ class CustomerController extends Controller {
     public function store(){
 
         $customer = new Customer();
-        $customer->id_customer = request('id_customer');
         $customer->firstname = request('firstname');
         $customer->lastname = request('lastname');
         $customer->password = request('password');
         $customer->phone = request('phone');
         $customer->email = request('email');
         $customer->save();
-        $customers = Customer::all();
-        return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
+
+        return view('customer.modify', ['headTitle' => 'Compte client', 'customer' => $customer]);
 
     }
 
@@ -32,8 +32,15 @@ class CustomerController extends Controller {
         return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
     }
 
-    public function modify() {
+    public function modify($id) {
         $customers = Customer::where('id_customer', request()->route('id_customer'))->first();
         return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
     }
+
+    public function update() {
+        $customers = Customer::where('id_customer', request()->route('id_customer'))->first();
+        return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
+    }
+
+
 }

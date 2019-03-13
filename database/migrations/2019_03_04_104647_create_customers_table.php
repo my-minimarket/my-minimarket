@@ -19,9 +19,9 @@ class CreateCustomersTable extends Migration
             $table->string('lastname');
             $table->string('email');
             $table->string('password');
-            $table->string('phone', 15);
-            $table->unsignedInteger('id_address_order');
-            $table->unsignedInteger('id_address_delivery');
+            $table->string('phone', 15)->nullable();
+            $table->unsignedInteger('id_address_order')->nullable();
+            $table->unsignedInteger('id_address_delivery')->nullable();
 
             $table->timestamps();
 
