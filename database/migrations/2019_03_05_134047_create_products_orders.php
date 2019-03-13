@@ -14,18 +14,23 @@ class CreateProductsOrders extends Migration
     public function up()
     {
         Schema::create('products_orders', function (Blueprint $table) {
-            $table->increments('id');
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
+            $table->unsignedInteger('product_id');
+            $table->unsignedInteger('order_id');
             $table->unsignedInteger('quantity');
             $table->timestamps();
+            $table->primary(['product_id', 'order_id']);
         });
 
         Schema::table('products_orders', function (Blueprint $table) {
-        $table->foreign('customer_id')->references('id')->on('orders')
+        $table->foreign('order_id')->references('id')->on('orders')
             ->onDelete('cascade')
             ->onUpdate('cascade');
     });
-        Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('')->references('id')->on('products_orders')
+        Schema::table('products_orders', function (Blueprint $table) {
+            $table->foreign('product_id')->references('id')->on('products')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -38,6 +43,14 @@ class CreateProductsOrders extends Migration
      */
     public function down()
     {
+        Schema::table('products_orders', function (Blueprint $table) {
+            $table->dropForeign('product_id');
+        });
+
+        Schema::table('products_orders', function (Blueprint $table) {
+            $table->dropForeign('order_id');
+        });
+
         Schema::dropIfExists('products_orders');
     }
 }
