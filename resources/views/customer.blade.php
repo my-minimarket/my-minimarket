@@ -2,11 +2,6 @@
 
 @section('content')
 
-    @foreach ($customer as $item)
-        {{$item->date_bill}} {{$item->date_order}}
-    @endforeach
-
-
     <div class="d-flex justify-content-center">
         <div class="   border border-dark col-md-6 ">
             <div class=" d-flex justify-content-center mt-2">
