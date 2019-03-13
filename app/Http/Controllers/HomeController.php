@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Http\Request;
+
+>>>>>>> Fin liaison orders / products
 class HomeController extends Controller
 {
     /**
