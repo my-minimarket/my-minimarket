@@ -38,6 +38,15 @@ Route::put('/customer/modify/{$id}', 'CustomerController@modify');
 Route::delete('/customer/modify/{id}','CustomerController@delete');
 
 
+Route::get('/customermodify', 'CustomerModifyController@show');
+
+Route::get('/orders', 'OrdersController@showOrders');
+
+
+Route::get('/orders', 'OrdersController@showorder');
+// Address
+Route::get('/address', 'AddressController@show');
+
 // Back office
 // Category
 Route::get('/bo/category', 'BoCategoryController@show');
@@ -60,3 +69,11 @@ Route::get('/bo/product_category', 'BoProductCategoryController@show');
 Route::post('/bo/product_category/{product_id}', 'BoProductCategoryController@add');
 Route::put('/bo/product_category/{product_id}', 'BoProductCategoryController@store');
 Route::delete('/bo/product_category/{product_id}/{category_id}','BoProductCategoryController@delete');
+
+// Address
+Route::get('/bo/address', 'BoAddressController@show');
+Route::post('/bo/address', 'AddressController@store');
+Route::get('/bo/address/create', 'AddressController@create');
+//Route::post('/bo/address/modify/{id}','AddressController@modify');
+//Route::put('/bo/address/modify/{id}','AddressController@update');
+//Route::delete('/bo/address/delete/{id}','AddressController@delete');

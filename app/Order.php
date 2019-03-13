@@ -4,29 +4,29 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+
+class Order extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'customers';
-
+    protected $table = 'orders';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'password', 'phone', 'email'
+        'date_bill', 'date_order'
     ];
-
-    public $timestamps = true;
-
-    public function addresses()
+    /*public function orders()
     {
-        return $this->hasMany('App\Address');
+        return $this->belongsTo('App\Order');
     }
+    public function customers()
+    {
+        return $this->belongsTo('App\Customer');
+    }*/
 }
-
