@@ -5,11 +5,11 @@
 
     @foreach ($adresses as $adresse)
 
-        <p> {{$adresse->id}} :
+        <p> {{$adresse->id}} : Customer lastname : {{$adresse->customer->lastname}}
             <br>
         {{$adresse->street}}, {{$adresse->complement}} {{$adresse->postal_code}} {{$adresse->city}} {{$adresse->country}}</p>
 
-        Customer lastname : {{$adresse->customer->lastname}}
+
         <br />
 
     @endforeach
