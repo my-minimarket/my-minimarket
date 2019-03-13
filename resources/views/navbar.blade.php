@@ -41,9 +41,9 @@
 
             </div>
         </div>
-        <a href="#">SUCRÉ</a>
-        <a href="#">SALÉ</a>
-        <a href="#">BOISSONS</a>
+        <a href="{{ route('catalog.show', ['id' => 1]) }}">SUCRÉ</a>
+        <a href="{{ route('catalog.show', ['id' => 2]) }}">SALÉ</a>
+        <a href="{{ route('catalog.show', ['id' => 3]) }}">BOISSONS</a>
         <a href="#">PROMOTIONS</a>
     </nav>
 </header>
