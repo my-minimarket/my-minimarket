@@ -23,7 +23,9 @@ class CreateOrdersTable extends Migration
         });
 
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->foreign('customer_id')->references('id')->on('customers')
+            ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
 
         DB::table('orders')->insert([

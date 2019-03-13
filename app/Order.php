@@ -21,12 +21,9 @@ class Order extends Model
     protected $fillable = [
         'date_bill', 'date_order'
     ];
-    /*public function orders()
+
+    public function products()
     {
-        return $this->belongsTo('App\Order');
+        return $this->belongsToMany('App\Product', 'products_orders');
     }
-    public function customers()
-    {
-        return $this->belongsTo('App\Customer');
-    }*/
 }
