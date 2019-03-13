@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Welcome
@@ -75,3 +76,6 @@ Route::get('/bo/address/create', 'AddressController@create');
 //Route::post('/bo/address/modify/{id}','AddressController@modify');
 //Route::put('/bo/address/modify/{id}','AddressController@update');
 //Route::delete('/bo/address/delete/{id}','AddressController@delete');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
