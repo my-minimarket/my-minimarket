@@ -34,4 +34,8 @@ class Product extends Model
         return $this->belongsToMany('App\Order', 'products_orders');
     }
 
+    public function promotions()
+    {
+        return $this->belongsToMany('App\Promotion', 'products_promotions');
+    }
 }
