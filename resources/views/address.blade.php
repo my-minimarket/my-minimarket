@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('headTitle')
+    {{ $headTitle }}
+@endsection
+
 @section('content')
     <h1>Adresses des clients</h1>
 
