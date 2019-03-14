@@ -17,10 +17,20 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <div class="icons">
-                <form action="#">
-                    <button type="submit"><i class="fa fa-user"></i></button>
-                </form>
+            <div class="dropdown">
+                <a class="dropbtn" href="#">
+                    <div class="icons">
+                        <form action="#">
+                            <button type="submit">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </form>
+                    </div>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ asset('/register') }}#">S'enregistrer</a>
+                </div>
             </div>
             <div class="icons">
                 <form action="#">
@@ -41,9 +51,9 @@
 
             </div>
         </div>
-        <a href="#">SUCRÉ</a>
-        <a href="#">SALÉ</a>
-        <a href="#">BOISSONS</a>
+        <a href="{{ route('catalog.show', ['id' => 1]) }}">SUCRÉ</a>
+        <a href="{{ route('catalog.show', ['id' => 2]) }}">SALÉ</a>
+        <a href="{{ route('catalog.show', ['id' => 3]) }}">BOISSONS</a>
         <a href="#">PROMOTIONS</a>
     </nav>
 </header>
