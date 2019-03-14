@@ -29,7 +29,7 @@
                         </div>
                     </a>
                     <div class="dropdown-content">
-                        <a href="{{ route('register') }}#">S'enregistrer</a>
+                        <a href="{{ route('register') }}">S'enregistrer</a>
                     </div>
                 </div>
             @else
