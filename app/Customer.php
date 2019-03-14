@@ -9,6 +9,11 @@ class Customer extends Authenticatable
 {
     use Notifiable;
 
+    public function isAdmin()
+    {
+        return $this->isAdmin;
+    }
+
     /**
      * The table associated with the model.
      *
@@ -60,9 +65,6 @@ class Customer extends Authenticatable
         return $this->hasMany('App\Order');
     }
 
-    public function isAdmin()
-    {
-        return $this->isAdmin;
-    }
+
 }
 
