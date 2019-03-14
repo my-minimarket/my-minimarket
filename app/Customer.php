@@ -22,7 +22,7 @@ class Customer extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'password', 'phone', 'email'
+        'firstname', 'lastname', 'password', 'phone', 'email', 'role'
     ];
 
     /**
@@ -34,6 +34,9 @@ class Customer extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function isAdmin(){
+        return $this->role === 'admin';
+    }
     /**
      * The attributes that should be cast to native types.
      *

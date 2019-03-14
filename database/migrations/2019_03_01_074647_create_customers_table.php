@@ -22,7 +22,7 @@ class CreateCustomersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('phone', 15)->nullable();
-            $table->boolean('isAdmin')->default(false);
+            $table->string('role')->default('customer');
             $table->unsignedInteger('id_address_order')->nullable();
             $table->unsignedInteger('id_address_delivery')->nullable();
             $table->rememberToken();
@@ -30,14 +30,16 @@ class CreateCustomersTable extends Migration
 
         });
 
-        DB::table('customers')->insert(['id' => '1', 'firstname' => 'Nesbit', 'lastname' => 'Merridie', 'password' => '', 'phone' => '', 'email' => 'mnesbit0@columbia.edu']);
+        DB::table('customers')->insert(['id' => '1', 'firstname' => 'Nesbit', 'lastname' => 'Merridie', 'password' => '', 'phone' => '', 'email' => 'mnesbit0@columbia.edu',]);
         DB::table('customers')->insert(['id' => '4', 'firstname' => 'McKea', 'lastname' => 'Cristian', 'password' => '', 'phone' => '', 'email' => 'cmckea3@feedburner.com']);
         DB::table('customers')->insert(['id' => '5', 'firstname' => 'Checkley', 'lastname' => 'Jonell', 'password' => '', 'phone' => '', 'email' => 'jcheckley4@zdnet.com']);
         DB::table('customers')->insert(['id' => '6', 'firstname' => 'Linneman', 'lastname' => 'Shaine', 'password' => '', 'phone' => '', 'email' => 'slinneman5@aol.com']);
         DB::table('customers')->insert(['id' => '9', 'firstname' => 'Storre', 'lastname' => 'Ricki', 'password' => '', 'phone' => '', 'email' => 'rstorre8@noaa.gov']);
         DB::table('customers')->insert(['id' => '10', 'firstname' => 'Weippert', 'lastname' => 'Danice', 'password' => '', 'phone' => '', 'email' => 'dweippert9@cafepress.com']);
         DB::table('customers')->insert(['id' => '15', 'firstname' => 'Filby', 'lastname' => 'Jessamine', 'password' => '', 'phone' => '', 'email' => 'jfilbye@tripadvisor.com']);
-
+        DB::table('customers')->insert(['id' => '2', 'firstname' => 'admin', 'lastname' => 'admin', 'email' => 'admin@admin.com', 'role' => 'admin', 'password' => \Illuminate\Support\Facades\Hash::make('admin')]);
+        DB::table('customers')->insert(['id' => '3', 'firstname' => 'customer', 'lastname' => 'customer', 'email' => 'customer@customer.com', 'role' => 'customer', 'password' => \Illuminate\Support\Facades\Hash::make('customer')
+        ]);
     }
 
     /*

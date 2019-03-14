@@ -6,10 +6,12 @@
         <div class="d-flex bg-white shadow p-3 justify-content-between">
             {{ $address->id . " " . $address->description }}
             <div class="d-flex">
+                @can('changeOwner')
                 <form method="POST" action="/bo/addresses/modify/{{ $address->id }}" class="ml-3">
                     @csrf
                     <input type="submit" name="modify" value="Modifier"/>
                 </form>
+                @endcan
                 <form method="POST" action="/bo/addresses/delete/{{ $address->id }}" class="ml-3">
                     @method('DELETE')
                     @csrf
