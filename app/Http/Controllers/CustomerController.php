@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
-use http\Env\Request;
 
-class CustomerController extends Controller {
+class CustomerController extends Controller
+{
 
-    public function show() {
+    public function show()
+    {
         return view('customer', ['headTitle' => 'Creation']);
     }
 
 
-    public function store(){
-
+    public function store()
+    {
         $customer = new Customer();
         $customer->firstname = request('firstname');
         $customer->lastname = request('lastname');
@@ -23,21 +24,23 @@ class CustomerController extends Controller {
         $customer->save();
 
         return view('customer.modify', ['headTitle' => 'Compte client', 'customer' => $customer]);
-
     }
 
-    public function delete() {
+    public function delete()
+    {
         Customer::where('id_customer', request()->route('id_customer'))->delete();
         $customers = Customer::all();
         return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
     }
 
-    public function modify($id) {
-        $customers = Customer::where('id_customer', request()->route('id_customer'))->first();
+    public function modify()
+    {
+        $customers = Customer::where('id', request()->route('id'))->first();
         return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
     }
 
-    public function update() {
+    public function update()
+    {
         $customers = Customer::where('id_customer', request()->route('id_customer'))->first();
         return view('customer.modify', ['headTitle' => 'Compte client', 'customers' => $customers]);
     }

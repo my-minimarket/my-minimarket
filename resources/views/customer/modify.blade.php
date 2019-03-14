@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('headTitle')
+    {{ $headTitle }}
+@endsection
+
 @section('content')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/customer.css') }}">
 
@@ -18,11 +22,11 @@
         <div class="form-row">
             <div class="col-xs-4">
                 <label for="inputFirstName20">Prénom</label>
-                <input type="text" class="form-control" placeholder="Prénom" value="{{$customer->firstname}}">
+                <input type="text" class="form-control" placeholder="Prénom" value="{{$customers->firstname}}">
             </div>
             <div class="col-xs-4">
                 <label for="inputLastName">NOM</label>
-                <input type="text" class="form-control" placeholder="Nom" value="{{$customer->lastname}}">
+                <input type="text" class="form-control" placeholder="Nom" value="{{$customers->lastname}}">
             </div>
         </div>
 
@@ -30,7 +34,7 @@
             <div class="col-xs-4">
                 <label for="inputEmail4">EMAIL</label>
                 <input type="email" class="form-control" id="inputEmail4" placeholder="Email"
-                       value="{{$customer->email}}">
+                       value="{{$customers->email}}">
             </div>
 
         </div>
@@ -49,7 +53,6 @@
     </form>
 
 
-    </div>
     <!-- FIN FORM MES INFORMATIONS-->
 
     <!-- DEBUT FORM MES ADRESSES-->
