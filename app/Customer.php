@@ -59,7 +59,7 @@ class Customer extends Authenticatable
 
     public function isAdmin()
     {
-        return false;
+        return $this->isAdmin;
     }
 }
 
