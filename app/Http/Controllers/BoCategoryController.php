@@ -11,6 +11,7 @@ class BoCategoryController extends Controller {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function show() {
+        $this->authorize('update-category');
         $categories = Category::all();
         return view('bo.categories.index', ['headTitle' => 'Catégories', 'categories' => $categories]);
     }

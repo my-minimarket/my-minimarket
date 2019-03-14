@@ -29,11 +29,11 @@ class CreateCustomersTable extends Migration
             $table->timestamps();
 
         });
-
+        DB::table('customers')->insert(['id' => '16', 'firstname' => 'admin', 'lastname' => 'admin', 'password' => 'root', 'isAdmin'=>true, 'phone' => '', 'email' => 'admin@minimarket.com']);
         DB::table('customers')->insert(['id' => '1', 'firstname' => 'Nesbit', 'lastname' => 'Merridie', 'password' => '', 'phone' => '', 'email' => 'mnesbit0@columbia.edu']);
         DB::table('customers')->insert(['id' => '4', 'firstname' => 'McKea', 'lastname' => 'Cristian', 'password' => '', 'phone' => '', 'email' => 'cmckea3@feedburner.com']);
         DB::table('customers')->insert(['id' => '5', 'firstname' => 'Checkley', 'lastname' => 'Jonell', 'password' => '', 'phone' => '', 'email' => 'jcheckley4@zdnet.com']);
-        DB::table('customers')->insert(['id' => '6', 'firstname' => 'Linneman', 'lastname' => 'Shaine', 'password' => '', 'phone' => '', 'email' => 'slinneman5@aol.com']);
+        DB::table('customers')->insert(['id' => '6', 'firstname' => 'Linneman', 'lastname' => 'Shaine', 'password' => '12345678', 'phone' => '', 'email' => 'slinneman5@aol.com']);
         DB::table('customers')->insert(['id' => '9', 'firstname' => 'Storre', 'lastname' => 'Ricki', 'password' => '', 'phone' => '', 'email' => 'rstorre8@noaa.gov']);
         DB::table('customers')->insert(['id' => '10', 'firstname' => 'Weippert', 'lastname' => 'Danice', 'password' => '', 'phone' => '', 'email' => 'dweippert9@cafepress.com']);
         DB::table('customers')->insert(['id' => '15', 'firstname' => 'Filby', 'lastname' => 'Jessamine', 'password' => '', 'phone' => '', 'email' => 'jfilbye@tripadvisor.com']);
