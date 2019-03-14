@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Customer;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -25,6 +26,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('update-category', function(Customer $customer)
+        {
+            return $user->isAdmin();
+        });
     }
 }
