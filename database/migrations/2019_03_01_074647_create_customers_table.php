@@ -29,7 +29,7 @@ class CreateCustomersTable extends Migration
             $table->timestamps();
 
         });
-        DB::table('customers')->insert(['id' => '16', 'firstname' => 'admin', 'lastname' => 'admin', 'password' => '', 'isAdmin'=>true, 'phone' => '', 'email' => 'admin@minimarket.com']);
+        DB::table('customers')->insert(['id' => '16', 'firstname' => 'admin', 'lastname' => 'admin', 'password' => '$2y$10$YXKXKnbaHdAexITieCzDqunAtpgLxm3j5rrjvd5HvEXcqmOgTiYLG', 'isAdmin'=>true, 'phone' => '', 'email' => 'admin@minimarket.com']);
         DB::table('customers')->insert(['id' => '1', 'firstname' => 'Nesbit', 'lastname' => 'Merridie', 'password' => '', 'phone' => '', 'email' => 'mnesbit0@columbia.edu']);
         DB::table('customers')->insert(['id' => '4', 'firstname' => 'McKea', 'lastname' => 'Cristian', 'password' => '', 'phone' => '', 'email' => 'cmckea3@feedburner.com']);
         DB::table('customers')->insert(['id' => '5', 'firstname' => 'Checkley', 'lastname' => 'Jonell', 'password' => '', 'phone' => '', 'email' => 'jcheckley4@zdnet.com']);
