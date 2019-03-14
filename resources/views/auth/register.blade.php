@@ -87,7 +87,7 @@
                         <div class="form-group row justify-content-between mb-4 mt-2">
                             <p><sup>*</sup>Champs requis</p>
                             <div>
-                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                                <button type="submit" class="btn btn-primary">S'enregistrer</button>
                                 <a href="{{ route('welcome.show') }}\"><button type="button" class="btn btn-secondary">Annuler</button></a>
                             </div>
                         </div>
