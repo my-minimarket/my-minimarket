@@ -27,6 +27,7 @@ class CreateProductsTable extends Migration
             $table->decimal('stock', 6, 2)->nullable();
             $table->string('picture', 255)->nullable();
             $table->timestamps();
+
         });
 
         DB::table('products')->insert([
