@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class CustomerModifyController extends Controller
 {
  public function show() {
-        return view('customermodify', ['headTitle' => 'Fiche client']);
+        return view('customer.modify', ['headTitle' => 'Fiche client']);
     }
 
 

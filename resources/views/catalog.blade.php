@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('headTitle')
+    {{ $headTitle }}
+@endsection
+
 @section('content')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/catalog.css') }}">
 

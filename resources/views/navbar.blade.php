@@ -3,7 +3,8 @@
 <header id="desktop-header">
     <div id="header">
         <div id="company">
-            <a href="{{ route('welcome.show') }}"><img src="{{ asset('pictures/logo_white.png') }}" alt="My MiniMarket" id="logo"></a>
+            <a href="{{ route('welcome.show') }}"><img src="{{ asset('pictures/logo_white.png') }}" alt="My MiniMarket"
+                                                       id="logo"></a>
             <div id="text-company">
                 <span class="helvetica">MY MINI</span>
                 <span class="theboldfont">MARKET</span>
@@ -17,11 +18,45 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <div class="icons">
-                <form action="#">
-                    <button type="submit"><i class="fa fa-user"></i></button>
-                </form>
-            </div>
+            @guest
+                <div class="dropdown">
+                    <a class="dropbtn" href="{{ route('login') }}">
+                        <div class="icons">
+                            <button type="button">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="{{ route('register') }}">S'enregistrer</a>
+                    </div>
+                </div>
+            @else
+                <div class="dropdown">
+                    <a class="dropbtn" href="{{ asset('customer/modify/' . Auth::user()->id) }}">
+                        <div class="icons" >
+                                <button type="button">
+                                    {{ Auth::user()->firstname }}
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                        </div>
+                    </a>
+                    <div class="dropdown-content">
+                        {{--<a href="{{ asset('/logout') }}#">Se déconnecter</a>--}}
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            @endguest
+
             <div class="icons">
                 <form action="#">
                     <button type="submit"><i class="fa fa-shopping-basket"></i></button>
@@ -41,9 +76,9 @@
 
             </div>
         </div>
-        <a href="#">SUCRÉ</a>
-        <a href="#">SALÉ</a>
-        <a href="#">BOISSONS</a>
+        <a href="{{ route('catalog.show', ['id' => 1]) }}">SUCRÉ</a>
+        <a href="{{ route('catalog.show', ['id' => 2]) }}">SALÉ</a>
+        <a href="{{ route('catalog.show', ['id' => 3]) }}">BOISSONS</a>
         <a href="#">PROMOTIONS</a>
     </nav>
 </header>

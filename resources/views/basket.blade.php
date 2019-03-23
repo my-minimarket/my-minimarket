@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('headTitle')
+    {{ $headTitle }}
+@endsection
+
 @section('content')
     <div>
         <h1>Votre Panier :</h1>

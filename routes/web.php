@@ -35,6 +35,7 @@ Route::get('/basket', 'BasketController@show');
 // Customer
 Route::get('/customer', 'CustomerController@show');
 Route::post('/customer/modify', 'CustomerController@store');
+Route::get('/customer/modify/{id}', 'CustomerController@modify');
 Route::put('/customer/modify/{$id}', 'CustomerController@modify');
 Route::delete('/customer/modify/{id}','CustomerController@delete');
 
@@ -76,6 +77,11 @@ Route::get('/bo/address/create', 'AddressController@create');
 //Route::post('/bo/address/modify/{id}','AddressController@modify');
 //Route::put('/bo/address/modify/{id}','AddressController@update');
 //Route::delete('/bo/address/delete/{id}','AddressController@delete');
+
+// Promotion
+Route::get('/promotion', 'PromotionsController@show');
+
 Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
