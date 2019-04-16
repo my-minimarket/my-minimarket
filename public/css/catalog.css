@@ -1,4 +1,14 @@
 .product-description {
-    background-color: darkorange;
+    background-color: #559074;
+    color: white;
+}
+
+.product-description-jap {
+    background-color: #ffbdcc;
+    color: white;
+}
+
+.product-description-usa {
+    background-color: #79bae2;
     color: white;
 }
