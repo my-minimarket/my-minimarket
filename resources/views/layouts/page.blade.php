@@ -28,5 +28,6 @@
 </body>
 <script src="{{ asset('js/jquery/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/welcome.js') }}"></script>
 </html>
 

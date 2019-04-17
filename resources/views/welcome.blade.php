@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('pictures/carousel/fondvert.png') }}" alt="fond vert" width="1100" height="400">
+                <img src="{{ asset('pictures/carousel/slideitalie.png') }}" alt="fond vert" width="1100" height="400">
                 <div class="carousel-caption">
                     <h3>SAVEUR D'ITALIE</h3>
                 </div>
@@ -81,3 +81,4 @@
         </div>
     </section>
 @stop
+

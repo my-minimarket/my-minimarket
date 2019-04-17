@@ -4,18 +4,16 @@
     <div id="header">
 
         <div id="company">
-
             <a href="{{ route('welcome.show') }}"><img src="{{ asset('pictures/logo_white.png') }}" alt="My MiniMarket"
                                                        id="logo"></a>
-
             <div id="text-company">
                 <span class="helvetica">MY MINI</span>
                 <span class="theboldfont">MARKET</span>
                 <span class="myriadpro">, THE WORLD IN MY POCKET</span>
-                </div>
-            <div class="" style="height: 60%; width: 70%">
-                <img class="img-fluid rounded mx-auto d-block" src="../pictures/sushiHEADER.gif" style="width: 53%">
             </div>
+        </div>
+        <div id="imgHeader">
+            <img id="sushi" alt="sushiHeader" class="img-fluid rounded mx-auto" src="{{ asset('pictures/sushiHEADER.gif') }}" style="height: 60px; display: none;">
         </div>
         <div id="icons-content">
             <div class="icons">
@@ -41,11 +39,11 @@
             @else
                 <div class="dropdown">
                     <a class="dropbtn" href="{{ asset('customer/modify/' . Auth::user()->id) }}">
-                        <div class="icons" >
-                                <button type="button">
-                                    {{ Auth::user()->firstname }}
-                                    <i class="fa fa-caret-down"></i>
-                                </button>
+                        <div class="icons">
+                            <button type="button">
+                                {{ Auth::user()->firstname }}
+                                <i class="fa fa-caret-down"></i>
+                            </button>
                         </div>
                     </a>
                     <div class="dropdown-content">

@@ -6,5 +6,6 @@ body {
     color:black;
     background-color:white;
     background-image:url(../pictures/fondMarket.png);
+    background-size: 100%;
     margin:0;
 }
