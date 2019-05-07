@@ -85,3 +85,11 @@ Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//API
+// products
+Route::get('/api/products/{id?}', 'Api\ProductsController@show')->name('products.show');
+Route::post('/api/products', 'Api\ProductsController@store')->name('products.store');
+Route::put('/api/products/{id}', 'Api\ProductsController@update')->name('products.update');
+Route::delete('/api/products/{id}', 'Api\ProductsController@delete')->name('products.destroy');
